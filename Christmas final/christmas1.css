@@ -1,0 +1,298 @@
+body {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(rgba(104, 187, 255, 0.5), rgba(63, 63, 63, 0.4)),
+    url("img/snowblack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+* {
+  font-family: "Pacifico", "Arial", "Raleway";
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: #fff;
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 4em;
+  font-family: Mountains of Christmas;
+  text-shadow: 0px 0px 8px rgba(255, 65, 185, 1);
+  animation: sliden 3s ease infinite;
+  letter-spacing: 0.2em;
+}
+@keyframes sliden {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.wire {
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  top: -150px;
+  border-bottom: 3px solid #222;
+  height: 100px;
+}
+.wire li {
+  position: relative;
+  list-style: none;
+  margin: 0 15px;
+  padding: 0;
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  top: 102%;
+  background: #fff;
+  animation-name: even-flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.wire li::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  border-radius: 4px;
+  top: -5px;
+  left: 0;
+  background: #444;
+}
+/* aninimation */
+
+.wire li:nth-child(odd) {
+  animation-name: odd-flash;
+}
+.wire li:nth-child(even) {
+  animation-name: even-flash;
+}
+@keyframes even-flash {
+  0%,
+  100% {
+    background: rgba(255, 230, 65, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 1);
+  }
+  50% {
+    background: rgba(255, 230, 65, 0.5);
+    box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 0.3);
+  }
+}
+@keyframes odd-flash {
+  50% {
+    background: rgba(255, 65, 185, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 65, 185, 1);
+  }
+  0%,
+  100% {
+    background: rgba(255, 65, 185, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 65, 185, 1);
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.mainbox {
+  position: relative;
+  width: 380px;
+  height: 430px;
+  border-radius: 10px;
+  background: #282828;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  min-width: 400px;
+  margin-bottom: 20px;
+}
+.mainbox .img_box {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.mainbox .img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.mainbox:hover .imgbox img {
+  opacity: 0;
+}
+.mainbox .detail {
+  position: absolute;
+  left: 37%;
+  width: 80px;
+  height: 80px;
+  bottom: 30px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #ffe530 0%, #ff2525 70%);
+  overflow: hidden;
+  color: #292929;
+  transition: all 0.5s ease;
+}
+.mainbox .detail h3 {
+  text-align: center;
+  font-family: cursive;
+  font-weight: 700;
+  margin-top: 25px;
+  color: #fff;
+}
+.mainbox .detail .info {
+  display: none;
+  margin: 25px;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+  height: 270px;
+  border: 1px solid #fff;
+  font-family: sans-serif;
+}
+.mainbox:hover .detail {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  border-radius: 0%;
+}
+.mainbox:hover .detail {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  border-radius: 0%;
+}
+.mainbox .detail:hover .info {
+  display: block;
+}
+/* for music */
+.music_box {
+  margin: auto;
+  width: 400px;
+  border-radius: 5px;
+  background-color: pink;
+  animation: sliden2 3s ease;
+  color: #444;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+.photo_music {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.music_photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.music i {
+  color: #128c7e;
+  font-size: 42px;
+}
+.top_icons i:hover,
+.bottom-icons i:hover {
+  font-size: 25px;
+  color: #128c7e;
+}
+.music {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 2em;
+}
+.top_icons {
+  padding: 0px 110px;
+}
+.bottom-icons {
+  padding: 0px 155px;
+}
+.title1 {
+  text-align: center;
+}
+.second_title1 {
+  text-align: center;
+}
+.audio {
+  padding: 0px 50px;
+}
+.button {
+  background: linear-gradient(
+    to right,
+    rgba(255, 230, 65, 1),
+    rgba(255, 65, 185, 1),
+    #ff2525
+  );
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  margin: auto;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid white;
+  transition: 0.5;
+}
+.button:hover {
+  border: 2px solid rgb(2, 0, 36);
+  width: 250px;
+}
+
+.home {
+  text-decoration: none;
+}
+.button-out a {
+  text-decoration: none;
+}
+.footer_container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico";
+  width: 100%;
+  background: rgb(2, 0, 36);
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff;
+  min-width: 400px;
+}
+.footer_container footer {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+@media screen and (max-width: 990px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .music_box {
+    justify-content: center;
+  }
+  .button {
+    justify-content: center;
+  }
+}
